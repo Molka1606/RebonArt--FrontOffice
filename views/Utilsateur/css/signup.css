@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* ======== PAGE GÉNÉRALE ======== */
+body {
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* ======== CONTAINER PRINCIPAL ======== */
+.box {
+  background-color: #fff;
+  border-radius: 30px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.35);
+  position: relative;
+  overflow: hidden;
+  width: 768px;
+  max-width: 100%;
+  min-height: 480px;
+}
+
+.box p {
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.3px;
+  margin: 20px 0;
+}
+
+.box span {
+  font-size: 12px;
+}
+
+.box a {
+  color: #3d6d51;
+  font-size: 13px;
+  text-decoration: none;
+  margin: 15px 0 10px;
+}
+
+.box button {
+  background-color: #8ba59b;
+  color: #fff;
+  font-size: 12px;
+  padding: 10px 45px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.box button.hidden {
+  background-color: transparent;
+  border-color: #fff;
+}
+
+/* ======== FORMULAIRE ======== */
+.form-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form-box form {
+  background-color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 40px;
+  height: 100%;
+}
+
+.form-box input {
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
+
+/* ======== CÔTÉ DROIT (BOUTON SE CONNECTER) ======== */
+.side-box {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+  border-radius: 150px 0 0 100px;
+  background: linear-gradient(to right, #3a5946, #2e7048);
+  color: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.side button {
+  background-color: #fff;
+  color: #2e7048;
+  font-size: 12px;
+  padding: 10px 45px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-top: 10px;
+  cursor: pointer;
+}
+
+.side a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* ======== PROFIL PAGE ======== */
+.body-profil { 
+  background: linear-gradient(to right, #e2e2e2, #c9d6ff);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-box {
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  background: white;
+  padding: 20px;
+  border-radius: 0;
+  box-sizing: border-box;
+}
+
+.page-title {
+  margin-bottom: 20px;
+  text-align: center;
+  color: #3a5946;
+}
+
+.card {
+  box-shadow: 0 1px 4px rgba(24, 28, 33, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.row {
+  display: flex;
+}
+
+.col-menu {
+  width: 25%;
+  border-right: 1px solid #ddd;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-link {
+  padding: 15px;
+  text-decoration: none;
+  color: #333;
+  border-bottom: 1px solid #eee;
+}
+
+.menu-link.active,
+.menu-link:hover {
+  font-weight: bold;
+  background: #f0f0f0;
+}
+
+.col-content {
+  flex: 1;
+  padding: 20px;
+}
+
+.photo-area {
+  display: flex;
+  align-items: center;
+}
+
+.photo {
+  width: 90px;
+  height: 90px;
+  border-radius: 50%;
+}
+
+.btn-zone {
+  margin-left: 20px;
+}
+
+.btn-photo {
+  border: 1px solid #3d6d51;
+  background: transparent;
+  color: #2e7048;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.photo-input {
+  display: none;
+}
+
+.btn-simple {
+  background-color: #3d6d51;
+  border: 1px solid #3d6d51;
+  background: transparent;
+  color: #555;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-main {
+  background: #3d6d51;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actions {
+  text-align: right;
+  margin-top: 20px;
+}
+
+.help-text {
+  color: #888;
+  font-size: 12px;
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.field {
+  margin-bottom: 15px;
+}
+
+.field label {
+  display: block;
+  margin-bottom: 5px;
+  color: #333;
+  text-align: left;
+}
+
+.field input,
+.field textarea,
+.field select {
+  background-color: #eee;
+  border: none;
+  margin: 8px 0;
+  padding: 10px 15px;
+  font-size: 13px;
+  border-radius: 8px;
+  width: 100%;
+  outline: none;
+}
