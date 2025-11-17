@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="assets/css/fontawesome.css">
     <link rel="stylesheet" href="assets/css/templatemo-space-dynamic.css">
     <link rel="stylesheet" href="assets/css/animated.css">
-    <link rel="stylesheet" href="assets/css/owl.css">
+
 <!--
     
 TemplateMo 562 Space Dynamic
@@ -57,27 +57,16 @@ https://templatemo.com/tm-562-space-dynamic
             <!-- ***** Logo End ***** -->
             <!-- ***** Menu Start ***** -->
             <ul class="nav">
-  <li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
-  <li class="scroll-to-section"><a href="#about">A propos nous</a></li>
-  <li class="scroll-to-section"><a href="#portfolio">Creations</a></li>
-  <li class="scroll-to-section"><a href="#blog">Blog</a></li> 
-  <li class="scroll-to-section">
-    <div class="main-red-button"><a href="#contact">Contacter maintenant</a></div>
-    <ul class="listee">
-      <li>
-        <a href="#" onclick="return false;">
-          <div class="user-avatar">👤</div>
-          <span>Molka Zouaoui</span>
-        </a>
-        <ul>
-          <li><a href="views/Utilsateur/info.html">Profil</a></li>
-          <li><a href="views/Utilsateur/signIn.html">Se connecter</a></li>
-          <li><a href="views/Utilsateur/signUp.html">S'inscrire</a></li>
-        </ul>
-      </li>
-    </ul>
-  </li> 
-</ul>
+              <li class="scroll-to-section"><a href="#top" class="active">Accueil</a></li>
+              <li class="scroll-to-section"><a href="#about">A propos nous</a></li>
+              <li class="scroll-to-section"><a href="#portfolio">Creations</a></li>
+              <li class="scroll-to-section"><a href="#blog">Blog</a></li> 
+               <li class="main-red-button" id="userMenu">
+                <a href="views/Utilisateur/signIn.html" id="loginBtn">Se connecter</a>
+            </li>
+            </ul>
+              </li> 
+            </ul>
           </nav>
         </div>
       </div>
@@ -422,13 +411,36 @@ https://templatemo.com/tm-562-space-dynamic
       </div>
     </div>
   </footer>
-  <!-- Scripts -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/js/owl-carousel.js"></script>
   <script src="assets/js/animation.js"></script>
   <script src="assets/js/imagesloaded.js"></script>
   <script src="assets/js/templatemo-custom.js"></script>
+
+  
+<script>
+    const user = JSON.parse(localStorage.getItem('user'));
+    const userMenu = document.getElementById('userMenu');
+
+    if(user){
+        userMenu.innerHTML = `
+            <a href="#" onclick="return false;">${user.nom} ${user.prenom}</a>
+            <ul class="listee">
+              <div class="user-avatar">👤</div>
+                <li><a href="views/Utilisateur/infoo.php">Profil</a></li>
+                <li><a href="views/Utilisateur/logout.php" id="logoutBtn">Déconnexion</a></li>
+            </ul>
+             
+</ul>
+
+        `;
+        document.getElementById('logoutBtn').addEventListener('click', function(){
+            localStorage.removeItem('user');
+            window.location.reload();
+        });
+    }
+</script>
 
 </body>
 </html>

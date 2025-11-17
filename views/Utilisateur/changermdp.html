@@ -5,11 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Changer le mot de passe</title>
   <link rel="stylesheet" href="css/signup.css">
+  <script src="js/user.js"></script>
 </head>
 <body>
 
 <div class="box">
-  <!-- Formulaire côté gauche -->
   <div class="form-box">
     <form method="POST" action="">
       <h1>Changer le mot de passe</h1>
@@ -25,11 +25,10 @@
     </form>
   </div>
 
-  <!-- Côté droit : menu -->
   <div class="side-box">
     <div class="side">
       <button><a href="info.html">Informations</a></button>
-      <button><a href="changermdp.html" >Changer le mot de passe</a></button>
+      <button type="submit" onclick="return validerChangementMdp()"><a href="changermdp.html" >Changer le mot de passe</a></button>
     </div>
   </div>
 </div>
